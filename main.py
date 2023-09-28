@@ -13,6 +13,8 @@ st.set_page_config(page_title="Article Summarizer",)
 st.title("News Article Summarizer")
 
 API_KEY = os.getenv('HUGGINGFACE_API_KEY')
+
+API_KEY = st.secrets["HUGGINGFACE_API_KEY"]
 headers = {"Authorization": f"Bearer {API_KEY}"}
 
 default_url = ""
